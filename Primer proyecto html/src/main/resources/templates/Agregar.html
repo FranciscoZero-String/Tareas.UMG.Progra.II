@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Listar Datos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="static/css/diseno.css" th:href="@{/css/diseno.css}">
+    </head>
+    <body>.3
+        <div><h1>Listar Datos</h1></div>
+                <div th:if="${empleados != null and !empleados.empty}">
+            <table border="1" class="tablita">
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Enero</th>
+                    <th>Febrero</th>
+                    <th>Marzo</th>
+                    <th>Total</th>
+                    <th>Promedio</th>
+                </tr>
+
+                <!-- vamos hacer una iteracion de objeto -->
+                <tr th:each="empleado : ${empleados}">
+                    <td th:text="${empleado.codigo}"></td>
+                    <td th:text="${empleado.nombre}"></td>
+                    <td th:text="${empleado.enero}"></td>
+                    <td th:text="${empleado.febrero}"></td>
+                    <td th:text="${empleado.marzo}"></td>
+                    <td th:text="${empleado.total}"></td>
+                    <td th:text="${empleado.promedio}"></td>
+                </tr>
+            </table>
+ <a href="http://www.localhost:8080"><input type="button" value="Regresar"></a>
+        </div>
+
+        <div th:if ="${empleados ==null or empleados.empty}">
+            no hay cuates.
+             <a href="http://www.localhost:8080"><input type="button" value="Regresar"></a>
+        </div>
+        
+    </body>
+</html>

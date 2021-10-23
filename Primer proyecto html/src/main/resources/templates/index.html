@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Spring Boot Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="static/css/diseno.css" th:href="@{/css/diseno.css}">
+    </head>
+    <body>
+        <div class="contenedor">
+        <h1><center>MENU PRINCIPAL</center></h1>
+        <p th:text="${msg}"></p> 
+        <br/>
+       <center>
+    <a href="http://www.localhost:8080/listar">
+        <input type="button" value="LISTAR DATOS">
+    </a>
+    <a href="http://www.localhost:8080/Agregar">
+        <input type="button" value="AGREGAR DATOS">
+    </a>
+    <a href="http://www.localhost:8080/Editar">
+        <input type="button" value="EDITAR DATOS">
+    </a>
+    <a href="http://www.localhost:8080/Eliminar">
+        <input type="button" value="ELIMINAR DATOS">
+    </a> 
+     <a href="http://www.localhost:8080/BuscaPorCantidad">
+        <input type="button" value="BUSCAR POR CANTIDAD" >
+    </a>  
+    <a href="http://www.localhost:8080/Mayor3meses">
+        <input type="button" value="MAYOR POR TRES MESES" >
+    </a>
+         </center>  
+        </div>
+    </body>
+</html>
